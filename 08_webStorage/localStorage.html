@@ -1,0 +1,47 @@
+
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Local Storage</title>
+    </head>
+    <body>
+        <button onclick="saveData()">Click me to save data </button>
+        <button onclick="readData()">Click me to read data </button>
+        <button onclick="deleteData()">Click me to remove data </button>
+        <button onclick="deleteAllData()">Click me to clear data </button>
+    
+    
+    <script type="text/javascript">
+        let p = {name:'zhangsan',age:18}
+        function saveData(){
+            //windowにファクションは直接書かなくても良い
+            // window.localStorage.setItem
+            // localStorageのデータはremoveItemがコールされた場合、またはユーザブラウザキャッシュを手動で消した場合にデータ消える
+            localStorage.setItem('msg',JSON.stringify(p))
+            localStorage.setItem('msg1',666)
+        }
+    
+        function deleteData(){
+            localStorage.removeItem("msg")
+        }
+    
+        function readData(){
+            //windowにファクションは直接書かなくても良い
+            // window.localStorage.setItem
+            // 存在しないキーをGetするとnullがかえされる
+            const result = localStorage.getItem('msg',)
+            // JSON.parse(null)の結果はnull
+            console.log( JSON.parse(result))
+        }
+    
+        function  deleteAllData(){
+            localStorage.clear()
+        }
+    </script>
+    </body>
+    
+    
+    </html>
