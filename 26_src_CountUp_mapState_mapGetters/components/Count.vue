@@ -51,6 +51,19 @@ export default {
     },
   },
   computed: {
+    // 自分でComputedの中で代入するロジックを書く
+    // sum() {
+    //   return this.$store.state.sum;
+    // },
+    // school() {
+    //   return this.$store.state.school;
+    // },
+    // subject() {
+    //   return this.$store.state.subject;
+    // },
+    // bigSum() {
+    //   return this.$store.getters.bigSum;
+    // },
     // mapStateからcomputedを生成, Stateからデータを呼び出す（Objectの書き方）
     //...mapState({ sum: "sum", school: "school", subject: "subject" }),
 
